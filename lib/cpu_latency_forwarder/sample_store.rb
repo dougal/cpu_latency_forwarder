@@ -43,6 +43,7 @@ module CPULatencyForwarder
       key       = [hostname, 'cpu-lat', bucket].join('.')
       message   = [key, value, timestamp].join(' ') + "\n"
 
+      puts "Writing `#{message}` to `#{@graphite_host}:#{@graphite_post}`"
       socket.write(message)
     end
 
