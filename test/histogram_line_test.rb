@@ -38,11 +38,6 @@ class TestHistogramLine < Minitest::Test
     assert_nil line.value
   end
 
-  # "[2, 4)                 1 |@@@@@@                                              |\n"
-  # "[4, 8)                 2 |@@@@@@@@@@@@@                                       |\n"
-  # "[8, 16)                8 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|\n"
-  # "[16, 32)               4 |@@@@@@@@@@@@@@@@@@@@@@@@@@                          |\n"
-  
   def test_data_lines
     raw = "[1]                    2 |@@@@@@@@@@@@@                                       |\n"
     line = instance(raw)
