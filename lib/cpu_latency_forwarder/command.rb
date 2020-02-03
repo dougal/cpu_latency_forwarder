@@ -14,7 +14,7 @@ module CPULatencyForwarder
       parse_options
       puts "Sampling..."
 
-      store = SampleStore.new(@graphite_host, @graphite_post)
+      store = SampleStore.new(@graphite_host, @graphite_port)
       epoch  = Time.now + @flush_interval
 
       IO.popen(@script_location) do |f|
