@@ -7,3 +7,5 @@ $LOAD_PATH.unshift(lib_path) unless $LOAD_PATH.include?(lib_path)
 
 require 'cpu_latency_forwarder'
 
+ENV['RUBY_ENV'] = 'test'
+

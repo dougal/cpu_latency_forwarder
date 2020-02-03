@@ -43,7 +43,10 @@ module CPULatencyForwarder
       key       = [hostname, 'cpu-lat', bucket].join('.')
       message   = [key, value, timestamp].join(' ') + "\n"
 
-      puts "Writing `#{message}` to `#{@graphite_host}:#{@graphite_port}`"
+      unless ENV['RUBY_ENV'] == 'test'
+        puts "Writing `#{message}` to `#{@graphite_host}:#{@graphite_port}`"
+      end
+
       socket.write(message)
     end
 
