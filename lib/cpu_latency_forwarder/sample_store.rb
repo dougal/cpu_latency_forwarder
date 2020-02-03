@@ -34,7 +34,7 @@ module CPULatencyForwarder
 
       clear!
     ensure
-      socket.close
+      socket && socket.close
     end
 
     private
