@@ -12,6 +12,7 @@ module CPULatencyForwarder
 
     def run!
       parse_options
+      puts "Sampling..."
 
       store = SampleStore.new(@graphite_host, @graphite_post)
       epoch  = Time.now + @flush_interval
