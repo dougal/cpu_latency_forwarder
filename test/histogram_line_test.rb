@@ -46,33 +46,33 @@ class TestHistogramLine < Minitest::Test
   def test_data_lines
     raw = "[1]                    2 |@@@@@@@@@@@@@                                       |\n"
     line = instance(raw)
+    assert line.has_data?
     assert_equal 1, line.lower_bound
     assert_equal 2, line.value
-    assert line.has_data?
 
     raw = "[2, 4)                 1 |@@@@@@                                              |\n"
     line = instance(raw)
+    assert line.has_data?
     assert_equal 2, line.lower_bound
     assert_equal 1, line.value
-    assert line.has_data?
 
     raw = "[4, 8)                 2 |@@@@@@@@@@@@@                                       |\n"
     line = instance(raw)
+    assert line.has_data?
     assert_equal 4, line.lower_bound
     assert_equal 2, line.value
-    assert line.has_data?
 
     raw = "[8, 16)                8 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|\n"
     line = instance(raw)
+    assert line.has_data?
     assert_equal 8, line.lower_bound
     assert_equal 8, line.value
-    assert line.has_data?
 
     raw = "[16, 32)               4 |@@@@@@@@@@@@@@@@@@@@@@@@@@                          |\n"
     line = instance(raw)
+    assert line.has_data?
     assert_equal 16, line.lower_bound
     assert_equal 4, line.value
-    assert line.has_data?
   end
 
 end

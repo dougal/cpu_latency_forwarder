@@ -9,7 +9,7 @@ module CPULatencyForwarder
     end
 
     def has_data?
-      !@lower_bound.nil? && !@value.nil?
+      !lower_bound.nil? && !value.nil?
     end
 
     def lower_bound
