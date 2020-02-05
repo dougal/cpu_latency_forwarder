@@ -3,7 +3,7 @@ Description=CPU Latency Forwarder
 
 [Service]
 WorkingDirectory=/opt/cpu_latency_forwarder
-ExecStart=/bin/bash -l -c './bin/run -h "<%= node['cpu_latency_forwarder']['hostname'] %>" -p "<%= node['cpu_latency_forwarder']['port'] %> -c "<%= node['cpu_latency_forwarder']['sample_script_path'] %> '-i "<%= node['cpu_latency_forwarder']['flush_interval'] %>
+ExecStart=/bin/bash -l -c './bin/run -h "<%= node['cpu_latency_forwarder']['hostname'] %>" -p "<%= node['cpu_latency_forwarder']['port'] %> -c "<%= node['cpu_latency_forwarder']['sample_script_path'] %>" -i "<%= node['cpu_latency_forwarder']['flush_interval'] %>"'
 Restart=always
 RestartSec=10
 StandardOutput=syslog
