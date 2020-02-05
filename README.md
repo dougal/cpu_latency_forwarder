@@ -5,7 +5,13 @@ Forwards CPU latency samples taken from a eBPF script, to a graphite instance.
 
 ## Install
 
-TODO
+Tested on Ubuntu 18.04, on AMD64 architecture.
+
+Install on node using Chef by running the following:
+
+```
+curl -fsSL https://github.com/dougal/cpu_latency_forwarder/raw/master/chef/install.sh | bash
+```
 
 
 ## Usage
