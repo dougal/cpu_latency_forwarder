@@ -1,0 +1,16 @@
+[Unit]
+Description=CPU Latency Forwarder
+
+[Service]
+WorkingDirectory=/opt/cpu_latency_forwarder
+ExecStart=/usr/bin/ruby bin/run
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=cpu_latency_forwarder
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

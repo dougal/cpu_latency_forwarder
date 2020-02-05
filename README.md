@@ -13,6 +13,8 @@ Install on node using Chef by running the following:
 curl -fsSL https://github.com/dougal/cpu_latency_forwarder/raw/master/chef/install.sh | bash
 ```
 
+Alternatively an example SystemD serivice unit is provided at `examples/cpu_latency_forwarder.service`.
+
 
 ## Usage
 
