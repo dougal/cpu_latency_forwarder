@@ -46,7 +46,7 @@ module CPULatencyForwarder
           @graphite_port = v
         end
 
-        opts.on("-c PATH", Integer, "Specify the path of the CPU sampling script. Default is '/root/cpu_latency.bt'.") do |v|
+        opts.on("-c PATH", String, "Specify the path of the CPU sampling script. Default is '/root/cpu_latency.bt'.") do |v|
           @script_location = v
         end
 
