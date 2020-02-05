@@ -25,6 +25,5 @@ else
 fi
 
 # Run chef
-cd /opt/cpu_latency_forwarder/chef
-chef-solo -c solo.rb -j bootstrap.json
+chef-solo -c /opt/cpu_latency_forwarder/chef/solo.rb -j /opt/cpu_latency_forwarder/chef/bootstrap.json
 
