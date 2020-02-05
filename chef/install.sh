@@ -8,8 +8,8 @@ apt install -y libgmp-dev ruby2.5-dev
 # NOTE: Chef fixed to version pre-licencing change.
 gem install chef -v '13.6.0'
 
-# Install bundler.
-gem install bundler
+# Install bundler, matching version used to Bundle application.
+gem install bundler -v '2.0.1'
 
 # Trust any host as github.
 # NOTE: Will re-add hosts if re-run.
