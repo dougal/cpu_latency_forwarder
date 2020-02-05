@@ -1,9 +1,12 @@
 #!/bin/bash -xe
 
+# Need Ruby headers etc. Install sister package to `ruby2.5` package already installed.
+# Also need library for libyajl2 Gem, a dependency of chef.
+apt install -y libgmp-dev ruby2.5-dev
+
 # Get and install chef.
 # NOTE: Chef fixed to version pre-licencing change.
-wget "https://packages.chef.io/files/stable/chef/13.6.0/ubuntu/18.04/chef_13.6.0-1_amd64.deb"
-dpkg -i chef_13.6.0-1_amd64.deb
+gem install chef -v '13.6.0'
 
 # Trust any host as github.
 # NOTE: Will re-add hosts if re-run.
